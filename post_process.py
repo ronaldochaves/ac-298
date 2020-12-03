@@ -2,14 +2,17 @@ import os
 import csv
 import pylab
 from scipy import interpolate
+from numpy import floor
 
 # Set chemckin output file
 output_dir = '/Users/roncha/Master Degree/AC-298/Exercicio_GNV'
 prefix = 'CKSoln_'
 suffix = '_PSRC1_solution_vs_parameter.csv'
-output_file_name = 'Projeto1_1'
-path = os.path.join(output_dir, prefix + output_file_name + suffix)
+# output_file_name = 'Projeto1_'
+# path = os.path.join(output_dir, prefix + output_file_name + suffix)
 plot_path = '/Users/roncha/Master Degree/AC-298/Project1/plots'
+gases = ['A', 'B', 'C']
+mechs = ['nc7', 'GRI-mech']
 
 
 def extract_object(path):
@@ -42,7 +45,7 @@ def find_event_on_y(x, y, factor):
 	return event
 
 
-def main():
+def main(path, gas, mech):
 	data_all = extract_object(path)
 
 	taus = [_['Residence_Time_C1__PSR_PSR_(C1)_(msec)'] for _ in data_all]
@@ -51,10 +54,12 @@ def main():
 	phis = sorted(list(set(phis)))
 
 	specie = 'CH4'
-	
+	plot_suffix = '_gas' + gas + '_mech' + mech + '.eps'
+
 	###
 	fig_index = 1
 	fig = pylab.figure(fig_index)
+	pylab.clf()
 	pylab.axes([0.125, 0.2, 0.95-0.125, 0.95-0.2])
 	pylab.xlim(800, 2000)
 	pylab.ylim(0, 0.1)
@@ -80,11 +85,14 @@ def main():
 	pylab.xlabel('Temperature [K]')
 	pylab.ylabel('Mole Fraction [-]')
 	pylab.legend()
-	pylab.savefig(os.path.join(plot_path, specie + '.eps'))
+	plot_name = specie + plot_suffix
+	pylab.savefig(os.path.join(plot_path, plot_name))
+	pylab.close()
 
 	###
 	fig_index = 2
 	fig = pylab.figure(fig_index)
+	pylab.clf()
 	pylab.axes([0.125, 0.2, 0.95-0.125, 0.95-0.2])
 	pylab.xlim(min(taus), max(taus))
 	pylab.ylim(800, 1800)
@@ -92,20 +100,27 @@ def main():
 	for phi in phis:
 		data_ref = {'Equivalence_Ratio_C1_Inlet1_PSR_(C1)_()':phi}
 		data = filter_object(event, data_ref)
-		lbl = '$gas A, ignition, \phi:{}$'.format(phi)
+		lbl = '$Ignition, \phi:{}$'.format(phi)
 		x = [_[keys[0]] for _ in data]
 		y = [_[keys[1]][0] for _ in data]
 		clr = color[phis.index(phi)]
 		pylab.plot(x, y, color=clr, ls='-', label=lbl)
 
-		lbl = '$gas A, burnout, \phi:{}$'.format(phi)
+		lbl = '$Burnout, \phi:{}$'.format(phi)
 		y = [_[keys[2]][0] for _ in data]
 		pylab.plot(x, y, color=clr, ls='--', label=lbl)
-	pylab.legend()
 	pylab.xlabel('$\\tau$ [ms]')
 	pylab.ylabel('Temperature [K]')
-	pylab.savefig(os.path.join(plot_path, specie + 'combustion.eps'))
+	pylab.legend()
+	plot_name = 'ig_bo' + plot_suffix
+	pylab.savefig(os.path.join(plot_path, plot_name))
+	pylab.close()
 
 
 if __name__ == '__main__':
-	main()
+	for i in range(6):
+		output_file_name = 'Projeto1_' + str(i + 1)
+		path = os.path.join(output_dir, prefix + output_file_name + suffix)
+		gas = gases[i % len(gases)]
+		mech = mechs[int(floor(i / len(gases)))]
+		main(path, gas, mech)
