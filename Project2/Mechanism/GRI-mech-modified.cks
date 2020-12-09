@@ -1,0 +1,20 @@
+#Modified accordingly to suggestions from doi:10.1016/j.ijhydene.2013.12.209 by Ronaldo Chaves in 12-8-2020
+#Wed Dec 09 00:31:56 BRST 2020
+Z\:\\Master\ Degree\\AC-298\\Project2\\S25_air_GRI-mech-modified__OUT_SURF_SPECIES=
+Chemistry\ Set\ Name=GRI-mech-modified
+Chemistry\ Set\ Description=Modified accordingly to suggestions from doi\:10.1016/j.ijhydene.2013.12.209 by Ronaldo Chaves in 12-8-2020
+Z\:\\Master\ Degree\\AC-298\\Project2\\S25_air_GRI-mech-modified__OUT_SURF_OUTPUT=
+IN_THERM_DB=Z\:\\Master Degree\\AC-298\\Project2\\Mechanism\\grimech30_thermo.dat
+Z\:\\Master\ Degree\\AC-298\\Project2\\S25_air_GRI-mech-modified__OUT_SURF_ASC=
+Z\:\\Master\ Degree\\AC-298\\Project2\\S25_air_GRI-mech-modified__OUT_XML_PARAMETERS=Z\:\\Master Degree\\AC-298\\Project2\\S25_air_GRI-mech-modified\\GRI-mech-modified.xml
+SYSTEM_FLAG=FALSE
+IN_CHEM_INPUT=Z\:\\Master Degree\\AC-298\\Project2\\Mechanism\\grimech30_chem_modified.inp
+Z\:\\Master\ Degree\\AC-298\\Project2\\S25_air_GRI-mech-modified__Run_Result=PREPROCESS_OK_42
+IN_TRANS_DB=Z\:\\Master Degree\\AC-298\\Project2\\Mechanism\\grimech30_transport.dat
+Z\:\\Master\ Degree\\AC-298\\Project2\\S25_air_GRI-mech-modified__OUT_CHEM_OUTPUT=Z\:\\Master Degree\\AC-298\\Project2\\S25_air_GRI-mech-modified\\GRI-mech-modified_gas.out
+IN_SURF_INPUT=
+FIT_TRANSPORT_PROPERTIES=1
+Z\:\\Master\ Degree\\AC-298\\Project2\\S25_air_GRI-mech-modified__OUT_CHEM_ASC=Z\:\\Master Degree\\AC-298\\Project2\\S25_air_GRI-mech-modified\\GRI-mech-modified_gas.asc
+Z\:\\Master\ Degree\\AC-298\\Project2\\S25_air_GRI-mech-modified__OUT_TRAN_ASC=Z\:\\Master Degree\\AC-298\\Project2\\S25_air_GRI-mech-modified\\GRI-mech-modified_gtran.asc
+Z\:\\Master\ Degree\\AC-298\\Project2\\S25_air_GRI-mech-modified__OUT_TRAN_OUTPUT=Z\:\\Master Degree\\AC-298\\Project2\\S25_air_GRI-mech-modified\\GRI-mech-modified_gtran.out
+Z\:\\Master\ Degree\\AC-298\\Project2\\S25_air_GRI-mech-modified__OUT_CHEM_SPECIES=Z\:\\Master Degree\\AC-298\\Project2\\S25_air_GRI-mech-modified\\GRI-mech-modified_gas.asu

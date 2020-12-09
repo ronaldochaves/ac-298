@@ -1,0 +1,72 @@
+! 
+! problem type definition
+! 
+ENRG   ! Solve Gas Energy Equation
+FREE   ! Freely Propagating Flame
+MULT   ! Use Multicomponent Transport
+TDIF   ! Use Thermal Diffusion (Soret Effect)
+VCOR   ! Use Correction Velocity Formalism
+! 
+! physical property
+! 
+EQUI 1.3   ! Equivalence Ratio
+PRES 1.0   ! Pressure (atm)
+TINF 298.0   ! Ambient Temperature (K)
+TUNBURNT 295.0   ! Unburnt Gas Temperature (K)
+UINL 40.0   ! Inlet Velocity (cm/sec)
+! 
+! reactor dimension definition
+! 
+CURV 0.5   ! Adaptive Grid Control Based On Solution Curvature
+GRAD 0.1   ! Adaptive Grid Control Based On Solution Gradient
+NADP 10   ! Number of Adaptive Grid Points
+NTOT 250   ! Maximum Number of Grid Points Allowed
+XEND 10.0   ! Ending Axial Position (cm)
+XSTR 0.0   ! Starting Axial Position (cm)
+! 
+! species property
+! 
+CPROD CO2   ! Complete-Combustion Products
+CPROD H2O   ! Complete-Combustion Products
+CPROD N2   ! Complete-Combustion Products
+FUEL CO 0.75   ! Fuel Fraction of Total Fuel Species (mole fraction)
+FUEL H2 0.25   ! Fuel Fraction of Total Fuel Species (mole fraction)
+MOLE   ! Print Mole Fractions
+OXID N2 0.79   ! Oxidizer Fraction of Total Oxidizer Species (mole fraction)
+OXID O2 0.21   ! Oxidizer Fraction of Total Oxidizer Species (mole fraction)
+PRMN 0.0   ! Minimum for Product Estimates (mole fraction)
+XIMN 0.0   ! Minimum for Estimated Intermediate Fraction (mole fraction)
+! 
+! solver control
+! 
+ATIM 1.0E-9   ! Absolute Tolerance for Pseudo Timestepping
+ATOL 1.0E-9   ! Absolute Tolerance
+DTMN 1.0E-10   ! Minimum Pseudo Time Step (sec)
+DTMX 0.01   ! Maximum Pseudo Time Step (sec)
+IRET 25   ! Number Time Steps Before Increasing
+ISTP 0   ! Number of Initial Pseudo Time Steps
+MAXTIME 100   ! Maximum Number of Pseudo Time Stepping Operations Allowed
+NDPR 100   ! Output Frequency during Integration
+NJAC 20   ! Number of Iterations before Updating Jacobian
+RTIM 0.0001   ! Relative Tolerance for Pseudo Timestepping
+RTOL 0.0001   ! Relative Tolerance
+SFLR -0.001   ! Minimum Bounds on Species Fractions
+SPOS 0.0   ! Positive Value to Reset Species Fractions
+SSMAXITER 100   ! Maximum Number of Iterations per Steady State Search
+TIM1 100.0 1.0E-6   ! Pseudo Time Steps (Fixed Temperature) (none, sec)
+TIM2 100.0 1.0E-6   ! Pseudo Time Steps (Energy Equation) (none, sec)
+TJAC 20   ! Number of Transient Iterations before Updating Jacobian
+TPROF   ! Automatic Estimated Temperature Profile
+TRMAXITER 25   ! Maximum Number of Iterations per Pseudo Time Step
+USE_TPRO_GRID   ! Based On Temperature Profile Estimate
+WDIF   ! Windward Differencing
+! 
+! output control and other misc. property
+! 
+DFAC 2.0   ! Time Step Decrement Factor
+EPSS 0.001   ! Threshold for Species Sensitivity
+GFAC 1.0   ! Gas Reaction Rate Multiplier
+PRNT 1   ! Print Level Control
+SIZE 10000000   ! Solution Data Block Size (bytes)
+UFAC 2.0   ! Time Step Increment Factor
+END

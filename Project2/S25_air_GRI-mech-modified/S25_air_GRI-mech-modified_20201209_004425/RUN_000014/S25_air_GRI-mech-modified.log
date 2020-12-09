@@ -1,0 +1,61 @@
+Execution of Job Resulted in the Following Lines of Output:
+
+
+Z:\Master Degree\AC-298\Project2\S25_air_GRI-mech-modified\S25_air_GRI-mech-modified_20201209_004425\RUN_000014>REM Chemkin-Generated Batch Job Command File 
+
+Z:\Master Degree\AC-298\Project2\S25_air_GRI-mech-modified\S25_air_GRI-mech-modified_20201209_004425\RUN_000014>REM get the Chemkin runtime environment defined 
+
+Z:\Master Degree\AC-298\Project2\S25_air_GRI-mech-modified\S25_air_GRI-mech-modified_20201209_004425\RUN_000014>CALL "C:\Program Files\Reaction\chemkin15151_win64\bin\run_chemkinpro_env_setup.bat" 
+
+Z:\Master Degree\AC-298\Project2\S25_air_GRI-mech-modified\S25_air_GRI-mech-modified_20201209_004425\RUN_000014>set REACTION_DIR=C:\Program Files\Reaction 
+
+Z:\Master Degree\AC-298\Project2\S25_air_GRI-mech-modified\S25_air_GRI-mech-modified_20201209_004425\RUN_000014>set RD_JRE_BIN=C:\Program Files\Reaction\jre18_win64\bin 
+
+Z:\Master Degree\AC-298\Project2\S25_air_GRI-mech-modified\S25_air_GRI-mech-modified_20201209_004425\RUN_000014>set CHEMKIN_BIN=C:\Program Files\Reaction\chemkin15151_win64\bin 
+
+Z:\Master Degree\AC-298\Project2\S25_air_GRI-mech-modified\S25_air_GRI-mech-modified_20201209_004425\RUN_000014>set CHEMKIN_VERS=15151 
+
+Z:\Master Degree\AC-298\Project2\S25_air_GRI-mech-modified\S25_air_GRI-mech-modified_20201209_004425\RUN_000014>set CHEMKIN_TITLE=ANSYS Chemkin 17.0 
+
+Z:\Master Degree\AC-298\Project2\S25_air_GRI-mech-modified\S25_air_GRI-mech-modified_20201209_004425\RUN_000014>set CHEMKIN_RELEASE_NUMBER=Release 15151 (x64) (18-Jan-2016) 
+
+Z:\Master Degree\AC-298\Project2\S25_air_GRI-mech-modified\S25_air_GRI-mech-modified_20201209_004425\RUN_000014>set PATH=C:\Program Files\Reaction\chemkin15151_win64\bin;C:\Program Files\Reaction\chemkin15151_win64\bin;C:\Program Files\Microsoft HPC Pack 2012\Bin\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\MSDEV\BIN 
+
+Z:\Master Degree\AC-298\Project2\S25_air_GRI-mech-modified\S25_air_GRI-mech-modified_20201209_004425\RUN_000014>if "xx" == "xx" goto done_userpath 
+
+Z:\Master Degree\AC-298\Project2\S25_air_GRI-mech-modified\S25_air_GRI-mech-modified_20201209_004425\RUN_000014>REM cd to the Working Directory for this job 
+
+Z:\Master Degree\AC-298\Project2\S25_air_GRI-mech-modified\S25_air_GRI-mech-modified_20201209_004425\RUN_000014>Z:   && cd \Master Degree\AC-298\Project2\S25_air_GRI-mech-modified\S25_air_GRI-mech-modified_20201209_004425\RUN_000014 
+
+Z:\Master Degree\AC-298\Project2\S25_air_GRI-mech-modified\S25_air_GRI-mech-modified_20201209_004425\RUN_000014>SET JAVA_ID=Not-defined 
+
+Z:\Master Degree\AC-298\Project2\S25_air_GRI-mech-modified\S25_air_GRI-mech-modified_20201209_004425\RUN_000014>REM DELETE ANY INTERMEDIATE FILES LEFTOVER FROM PREVIOUS RUN 
+
+Z:\Master Degree\AC-298\Project2\S25_air_GRI-mech-modified\S25_air_GRI-mech-modified_20201209_004425\RUN_000014>IF EXIST "Z:\Master Degree\AC-298\Project2\S25_air_GRI-mech-modified\S25_air_GRI-mech-modified_20201209_004425\RUN_000014\XMLdata_S25_air_GRI-mech-modified.zip" DEL /F /Q "Z:\Master Degree\AC-298\Project2\S25_air_GRI-mech-modified\S25_air_GRI-mech-modified_20201209_004425\RUN_000014\XMLdata_S25_air_GRI-mech-modified.zip" 
+
+Z:\Master Degree\AC-298\Project2\S25_air_GRI-mech-modified\S25_air_GRI-mech-modified_20201209_004425\RUN_000014>REM COPY FILES TO WORKING DIR 
+
+Z:\Master Degree\AC-298\Project2\S25_air_GRI-mech-modified\S25_air_GRI-mech-modified_20201209_004425\RUN_000014>COPY "C:\Program Files\Reaction\chemkin15151_win64\data\chemkindata.dtd" "Z:\Master Degree\AC-298\Project2\S25_air_GRI-mech-modified\S25_air_GRI-mech-modified_20201209_004425\RUN_000014" 
+        1 arquivo(s) copiado(s).
+
+Z:\Master Degree\AC-298\Project2\S25_air_GRI-mech-modified\S25_air_GRI-mech-modified_20201209_004425\RUN_000014>REM RUN THE JOB AND CAPTURE EXIT STATUS 
+
+Z:\Master Degree\AC-298\Project2\S25_air_GRI-mech-modified\S25_air_GRI-mech-modified_20201209_004425\RUN_000014>SET CHEMKIN_MODE=Pro 
+
+Z:\Master Degree\AC-298\Project2\S25_air_GRI-mech-modified\S25_air_GRI-mech-modified_20201209_004425\RUN_000014>CKReactorFreelyPropagatingFlame -i "Z:\Master Degree\AC-298\Project2\S25_air_GRI-mech-modified\S25_air_GRI-mech-modified_20201209_004425\RUN_000014\S25_air_GRI-mech-modified.inp" -o "Z:\Master Degree\AC-298\Project2\S25_air_GRI-mech-modified\S25_air_GRI-mech-modified_20201209_004425\RUN_000014\S25_air_GRI-mech-modified.out" -x "Z:\Master Degree\AC-298\Project2\S25_air_GRI-mech-modified\S25_air_GRI-mech-modified_20201209_004425\RUN_000014\XMLdata_S25_air_GRI-mech-modified.zip" Pro -m "S25_air_GRI-mech-modified.out.mon" -c "Z:\Master Degree\AC-298\Project2\S25_air_GRI-mech-modified\GRI-mech-modified_gas.asc" -t "Z:\Master Degree\AC-298\Project2\S25_air_GRI-mech-modified\GRI-mech-modified_gtran.asc" 
+Licenses Released
+
+Z:\Master Degree\AC-298\Project2\S25_air_GRI-mech-modified\S25_air_GRI-mech-modified_20201209_004425\RUN_000014>set exit_status=0 
+
+Z:\Master Degree\AC-298\Project2\S25_air_GRI-mech-modified\S25_air_GRI-mech-modified_20201209_004425\RUN_000014>if exist CKRUN_ERROR.TXT del /F /Q CKRUN_ERROR.TXT 
+
+Z:\Master Degree\AC-298\Project2\S25_air_GRI-mech-modified\S25_air_GRI-mech-modified_20201209_004425\RUN_000014>if exist CKRUN_SUCCESS.TXT del /F /Q CKRUN_SUCCESS.TXT 
+
+Z:\Master Degree\AC-298\Project2\S25_air_GRI-mech-modified\S25_air_GRI-mech-modified_20201209_004425\RUN_000014>if 0 GTR 0 echo exit_status=0  1>CKRUN_ERROR.TXT 
+
+Z:\Master Degree\AC-298\Project2\S25_air_GRI-mech-modified\S25_air_GRI-mech-modified_20201209_004425\RUN_000014>if 0 EQU 0 echo exit_status=0  1>CKRUN_SUCCESS.TXT 
+
+Z:\Master Degree\AC-298\Project2\S25_air_GRI-mech-modified\S25_air_GRI-mech-modified_20201209_004425\RUN_000014>exit 0 
+
+
+
